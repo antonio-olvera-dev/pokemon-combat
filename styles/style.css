@@ -11,20 +11,9 @@ html {
   background-size: 100% 100%;
 }
 
-#audio{
-  display: flex;
-  position: static;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 100%;
-}
-#audio > audio{
-  margin: 1em;
-  
-}
 
 /* ----------------------------inicio-------------------------------------------------------- */
-.title-ini {
+#title-ini {
   display: flex;
   position: fixed;
   justify-content: center;
@@ -34,7 +23,7 @@ html {
   height: 100%;
   margin: auto;
 }
-.title-ini > img {
+#title-ini > img {
   align-content: center;
   width: 50%;
   height: 50%;
@@ -61,7 +50,38 @@ html {
 @keyframes anim-titulo-ini {
 }
 
-/* ----mew---- */
+
+#subtitle-ini{
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-right: 2em;
+  margin-top: -1em;
+
+  animation-name: anim-subtitulo-idle;
+  animation-duration: 1800ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes anim-subtitulo-idle {
+  0% {
+    color: #ffffff;
+  }
+  
+  50% {
+    color: #ffffff00;
+  }
+  
+  100% {
+    color: #ffffff;
+  }
+}
+@keyframes anim-titulo-ini {
+}
+
+/* ------------mew------------ */
 .img-mew {
   display: flex;
   justify-content: center;
@@ -142,6 +162,6 @@ html {
     transform: translate(50em,-90em);
   }
 }
-/* ----mew---- */
+/* ------------mew------------ */
 
 /* ----------------------------inicio-------------------------------------------------------- */

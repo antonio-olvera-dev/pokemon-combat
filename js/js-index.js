@@ -1,3 +1,5 @@
+"use strict";
+// ----------animacion mew------------------
 let blockMew = true;
 setInterval(() => {
 
@@ -8,7 +10,7 @@ setInterval(() => {
         mew.classList.remove("img-mew-1");
         blockMew = false;
     } else {
-        mew.src = "images/mew-idle.gif";   
+        mew.src = "images/mew-idle.gif";
         mew.classList.add("img-mew-1");
         mew.classList.remove("img-mew-2");
         blockMew = true;
@@ -16,6 +18,50 @@ setInterval(() => {
 
 }, 20000);
 
+// -------------audio inicio------------------
+let blockAudio = false;
+document.getElementById('bod').addEventListener('click', function () {
 
-let aud = document.getElementById("audio").children[0];
-aud.volume = 0.2;
+    if (!blockAudio) {
+        let context = new AudioContext();
+        let audi = new Audio("music/opening.mp3")
+        audi.loop = false;
+        audi.autoplay = true;
+        audi.volume = 1;
+        audi.play();
+        // ------sonido pikachu--------
+        let audi2 = new Audio("music/pikachu.mp3")
+        audi2.loop = false;
+        audi2.volume = 1;
+        audi2.autoplay = true;
+        audi2.play();
+        // ----------cambiar de pantalla--------------
+        document.getElementById('title-ini').style.display = 'none';
+
+
+        blockAudio = true;
+    }
+    fullsc();
+
+});
+
+document.getElementById('bod').addEventListener('keypress', function () {
+    document.getElementById('bod').click()
+});
+// -------------audio inicio------------------
+// -------------fullscreen------------------
+function fullsc() {
+    let elem = document.getElementById('doc-main');
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+        /* Firefox */
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+        /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        /* IE/Edge */
+        elem.msRequestFullscreen();
+    }
+} // -------------fullscreen------------------

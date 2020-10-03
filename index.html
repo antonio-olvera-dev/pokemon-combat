@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="doc-main">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Pokemon combat</title>
+    <link rel="stylesheet" href="styles/choose.css">
+    <title>Pokecombat</title>
 </head>
-<body>
-    <div id="audio">
-        <audio controls autoplay preload="auto">
-        <source src="music/opening.mp3" type="audio/mp3">
-             </audio>
-    </div>
-    
-<div class="title-ini">
+<body id="bod">
+
+    <!-- -------------------------Inicio------------------------------------- -->
+<div id="title-ini">
 <img src="images/img-titulo.png" alt="Titulo">
 <div class="img-mew">
 <img class="img-mew-1" src="images/mew-idle.gif" alt="Mew">
+<p id="subtitle-ini">Pulsa una tecla o haz click para continuar</p>
 </div>
 </div>
+<!-- -------------------------Inicio------------------------------------- -->
+
+<!-- -------------------------------choose---------------------------------------- -->
+<div id="choose-main">
+    <!-- -------------------------------left---------------------------------------- -->
+<div id="choose-left"></div>
+
+<!-- -------------------------------center---------------------------------------- -->
+<div id="choose-center"></div>
+
+<!-- -------------------------------right---------------------------------------- -->
+<div id="choose-right"></div>
+</div>
+<!-- -------------------------------choose---------------------------------------- -->
 
 
 
 
 
 
-    <script src="js/js-index.js"></script>
+    <script src="js/js-index.js" type="text/javascript"></script>
+    <script src="js/choose.js" type="text/javascript"></script>
+
 </body>
 </html>
