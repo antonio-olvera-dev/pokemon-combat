@@ -1,4 +1,11 @@
 "use strict";
+// ----------------------------------------------------
+(function(){
+
+    document.getElementById('choose-main').style.display = 'none';
+}());
+// ---------------------------------------------------------
+
 // ----------animacion mew------------------
 let blockMew = true;
 setInterval(() => {
@@ -36,9 +43,14 @@ document.getElementById('bod').addEventListener('click', function () {
         audi2.autoplay = true;
         audi2.play();
         // ----------cambiar de pantalla--------------
-        document.getElementById('title-ini').style.display = 'none';
+setTimeout(()=>{
 
-
+    document.getElementById('title-ini').style.display = 'none';
+    document.getElementById('choose-main').style.display = 'flex';
+    document.getElementById('bod').style.background = 'url(images/bg-3.jpg)';
+    
+},1000);
+       // ----------cambiar de pantalla--------------
         blockAudio = true;
     }
     fullsc();
@@ -65,3 +77,4 @@ function fullsc() {
         elem.msRequestFullscreen();
     }
 } // -------------fullscreen------------------
+

@@ -1,6 +1,6 @@
-#title-ini {
+/* #title-ini {
   display: none;
-}
+} */
 #choose-main {
   display: flex;
   flex-direction: row;
@@ -97,6 +97,15 @@
   margin-bottom: 3em;
 }
 
+.choose-img-pokemon-1 {
+  transform: scale(1,1);
+  transition-duration: 0ms;
+ }
+.choose-img-pokemon-2 {
+ transform: scale(2,2);
+ transition-duration: 300ms;
+}
+
 .choose-venusaur{
   height: 100%;
 }
@@ -173,7 +182,7 @@
   }
 
   50% {
-    transform: rotate(360deg) scale(2, 2);
+    transform: rotate(360deg) scale(3, 3);
   }
 
   100% {

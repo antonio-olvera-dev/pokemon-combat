@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/choose.css">
+    <link rel="stylesheet" href="styles/transiciones.css">
+
     <title>Pokecombat</title>
 </head>
 
@@ -69,23 +71,24 @@
         <div id="choose-right">
 
             <div class="choose-caract">
-                <div><span>Tipo:</span><span id="tipo-0" class="tipo">Planta</span><span id="tipo-1"
-                        class="tipo-2">Veneno</span></div>
-                  <div><span>Nombre:</span><span id="caract-nombre" class="choose-caract-subtext">Venusaur</span></div>
-                <div><span>Vida:</span><span id="caract-vida" class="choose-caract-subtext">270</span></div>
-                <div><span>Ataque:</span><span id="caract-ataque" class="choose-caract-subtext">169</span></div>
-                <div><span>Defensa:</span><span id="caract-defensa" class="choose-caract-subtext">171</span></div>
+                <div><span>Tipo:</span><span id="caract-tipo-0" class="tipo">Planta</span>
+                    <span id="caract-tipo-1" class="tipo-2">Veneno</span></div>
+
+                  <div><span>Nombre:</span> <span id="caract-nombre" class="choose-caract-subtext">Venusaur</span> </div>
+                <div><span>Vida:</span> <span id="caract-vida" class="choose-caract-subtext">270</span> </div>
+                <div><span>Ataque:</span> <span id="caract-ataque" class="choose-caract-subtext">169</span> </div>
+                <div><span>Defensa:</span> <span id="caract-defensa" class="choose-caract-subtext">171</span> </div>
             </div>
 
             <div class="choose-img-pokemon">
-                <img class="choose-venusaur" src="images/venusaur.gif" alt="Venusaur">
+                <img id="img-cambio-pokemon" class="choose-venusaur" src="images/venusaur.gif" alt="Venusaur">
 
             </div>
 
             <div class="choose-selector">
-                <div><img id="arrow-left" src="images/arrow-left.png" alt="Left"></div>
-                <div><img id="fight" src="images/poke-fight.png" alt="Fight"></div>
-                <div><img id="arrow-right" src="images/arrow-right.png" alt="Right"></div>
+                <div><img onclick="accionArrowLeft()" id="arrow-left" src="images/arrow-left.png" alt="Left"></div>
+                <div><img onclick="fight()" id="fight" src="images/poke-fight.png" alt="Fight"></div>
+                <div><img onclick="accionArrowRight()" id="arrow-right" src="images/arrow-right.png" alt="Right"></div>
             </div>
 
         </div>
