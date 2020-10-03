@@ -18,7 +18,6 @@
   flex-direction: column;
   height: 100%;
   width: 30%;
-  background-color: hotpink;
 }
 /* -----------caracteristicas--------------- */
 .choose-caract {
@@ -95,7 +94,7 @@
   height: 30%;
   width: 50%;
   margin-top: 4em;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 
 .choose-venusaur{
@@ -190,12 +189,129 @@
   flex-direction: column;
   height: 100%;
   width: 30%;
-  background-color: hotpink;
 }
 
 .choose-selector {
   display: flex;
-  width: 80%;
+  width: 100%;
   height: 20%;
-  background-color: rgb(1, 63, 1);
+}
+
+.choose-selector > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#arrow-left{
+width: 80%;
+
+animation-name: anim-arrow;
+animation-iteration-count: infinite;
+animation-duration: 2500ms;
+animation-timing-function: linear;
+
+}
+#arrow-left:hover{
+  animation-name:anim-over ;
+  }
+  #arrow-left:active{
+    animation-name:anim-on ;
+  }
+#arrow-right{
+  width: 80%;
+
+  animation-name: anim-arrow;
+  animation-iteration-count: infinite;
+  animation-duration: 2500ms;
+  animation-timing-function: linear;
+
+}
+#arrow-right:hover{
+animation-name:anim-over ;
+}
+#arrow-right:active{
+  animation-name:anim-on ;
+}
+
+#fight{
+  width: 80%;
+  margin-top: 25%;
+  animation-name: anim-fight;
+  animation-iteration-count: infinite;
+  animation-duration: 2500ms;
+  animation-timing-function: linear;
+}
+#fight:hover{
+  animation-name:anim-over ;
+  }
+  #fight:active{
+    animation-name:anim-on ;
+  }
+
+/* ------- */
+@keyframes anim-on{
+  0%{
+    transform: scale(1);
+
+  }
+
+  100%{
+    transform: scale(1);
+
+  }
+}
+@keyframes anim-over{
+  0%{
+    transform: scale(1.2);
+
+  }
+
+  100%{
+    transform: scale(1.2);
+
+  }
+}
+@keyframes anim-arrow{
+  0%{
+    transform: scale(1);
+
+  }
+
+  25%{
+    transform: scale(0.95);
+  }
+
+  75%{
+    transform: scale(1.05);
+
+  }
+
+  100%{
+    transform: scale(1);
+
+  }
+}
+/* ------- */
+@keyframes anim-fight{
+  0%{
+    transform: translateY(0em);
+
+  }
+
+  25%{
+transform: translateY(0.5em);
+  }
+
+  75%{
+    transform: translateY(-0.5em);
+
+  }
+
+  100%{
+    transform: translateY(0em);
+
+  }
 }
