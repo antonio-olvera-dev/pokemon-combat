@@ -1,28 +1,201 @@
-
-#choose-main{
-
-
+#title-ini {
+  display: none;
 }
-
-
+#choose-main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
 /* -------------------------------left---------------------------------------- */
-#choose-left{
+#choose-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  background-color: hotpink;
+}
+/* -----------caracteristicas--------------- */
+.choose-caract {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  height: 20%;
+  width: 50%;
 
+  background-color: rgb(5, 160, 207);
+  border-radius: 0.3em;
+  padding: 0.1em;
+  padding-top: 0.12em;
+  padding-right: 0.12em;
 
 }
 
+.choose-caract > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 25%;
+  width: 100%;
+}
+.choose-caract > div:nth-child(odd) {
+  background-color: rgb(1, 120, 156);
+}
+.choose-caract > div:nth-child(even) {
+  background-color: rgb(0, 72, 94);
+}
 
+.choose-caract > div:first-child {
+  border-top-right-radius: 0.3em;
+  border-top-left-radius: 0.3em;
+}
+.choose-caract > div:last-child {
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.choose-caract > div > span{
+  margin-left: 0.8em;
+
+  color: white;
+}
+.choose-caract > div > span:first-child{
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.tipo{
+  padding: 0.3em;
+  border-radius: 0.3em;
+  background-color: rgb(2, 179, 2);
+}
+.tipo-2{
+  padding: 0.3em;
+  border-radius: 0.3em;
+  background-color: rgb(150, 2, 179);
+}
+.choose-caract-subtext{
+  font-size: 1.1em;
+
+}
+
+/* -----------caracteristicas--------------- */
+
+/* ----imagen del pokemon -----*/
+.choose-img-pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 50%;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.choose-venusaur{
+  height: 100%;
+}
+/* ----imagen del pokemon -----*/
+/* ----historia -----*/
+.choose-history {
+  display: flex;
+  width: 90%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(rgb(0, 109, 143),rgb(0, 30, 39));
+  border-radius: 0.3em;
+  border-top-color:rgb(0, 151, 197) ;
+  border-right-color:rgb(0, 109, 143) ;
+  border-left-color:rgb(0, 109, 143) ;
+  border-bottom-color:rgb(1, 97, 126) ;
+  border-style: solid;
+  border-width: 0.15em;
+
+}
+#text-history{
+  display: flex;
+  font-size: 1em;
+  color: white;
+  margin: 1.5em;
+  text-align: justify;
+}
+/* ----Historia -----*/
 /* -------------------------------center-------------------------------------- */
-#choose-center{
-
-
+#choose-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 15%;
+}
+#choose-center > div {
+  display: flex;
+  justify-content: center;
+}
+#img-vs {
+  width: 90%;
 }
 
+.vs-1 {
+  animation-name: anim-vs-1;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.vs-2 {
+  animation-name: anim-vs-2;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
 
+@keyframes anim-vs-1 {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 
+@keyframes anim-vs-2 {
+  0% {
+    transform: rotate(0deg) scale(1, 1);
+  }
+
+  50% {
+    transform: rotate(360deg) scale(2, 2);
+  }
+
+  100% {
+    transform: rotate(720deg) scale(1, 1);
+  }
+}
 
 /* -------------------------------right--------------------------------------- */
-#choose-right{
+#choose-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  background-color: hotpink;
+}
 
-
+.choose-selector {
+  display: flex;
+  width: 80%;
+  height: 20%;
+  background-color: rgb(1, 63, 1);
 }
