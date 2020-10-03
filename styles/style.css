@@ -1,3 +1,147 @@
-.g{
-    
+* {
+  margin: 0%;
+  padding: 0%;
 }
+
+body,
+html {
+  height: 100%;
+  background-repeat: no-repeat;
+  background: url(../images/bg-inicio.jpg) no-repeat center center fixed;
+  background-size: 100% 100%;
+}
+
+#audio{
+  display: flex;
+  position: static;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+#audio > audio{
+  margin: 1em;
+  
+}
+
+/* ----------------------------inicio-------------------------------------------------------- */
+.title-ini {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.title-ini > img {
+  align-content: center;
+  width: 50%;
+  height: 50%;
+  margin-top: -3%;
+  animation-name: anim-titulo-idle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes anim-titulo-idle {
+  0% {
+    transform: translateY(0em);
+  }
+  25% {
+    transform: translateY(-1em);
+  }
+  75% {
+    transform: translateY(1em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
+}
+@keyframes anim-titulo-ini {
+}
+
+/* ----mew---- */
+.img-mew {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.img-mew-1 {
+
+  display: flex;
+  height: 32%;
+  margin-top: 5%;
+  animation-name:mew-anim-1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+}
+.img-mew-2 {
+
+  display: flex;
+  height: 32%;
+  margin-top: 5%;
+  animation-name:mew-anim-2;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+}
+
+@keyframes mew-anim-1 {
+  0%{
+     transform: translate(90em,20em);
+  }
+
+  25%{
+    transform: translate(5em,-10em);
+  }
+  40%{
+    transform: translate(0em,-10em);
+  }
+
+  55%{
+    transform: translate(-10em,-10em);
+  }
+
+  75%{
+    transform: translate(-30em,0em);
+  }
+  80%{
+    transform: translate(-40em,-20em);
+  }
+  100%{
+    transform: translate(-90em,-90em);
+  }
+}
+
+
+@keyframes mew-anim-2 {
+  0%{
+    transform: translate(-90em,-50em);
+  }
+
+  25%{
+    transform: translate(0em,0em);
+  }
+
+  40%{
+    transform: translate(0em,0em);
+  }
+
+  
+
+  75%{
+    transform: translate(35em,15em);
+  }
+  85%{
+    transform: translate(45em,30em);
+  }
+
+  100%{
+    transform: translate(50em,-90em);
+  }
+}
+/* ----mew---- */
+
+/* ----------------------------inicio-------------------------------------------------------- */
