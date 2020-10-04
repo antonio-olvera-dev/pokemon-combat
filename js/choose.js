@@ -149,6 +149,7 @@ function fight() {
         reproductor("music/boton.mp3", 1);
         setTimeout(() => {
             document.getElementsByClassName('vs-1')[0].classList.remove('vs-2');
+            document.getElementById('choose-main').style.display = 'none';
 
 
 
