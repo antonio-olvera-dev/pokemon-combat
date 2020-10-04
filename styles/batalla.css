@@ -5,3 +5,153 @@ display: none;
 #choose-main{
 display: none;
 }
+
+/* ---------------------centro-------------------------------- */
+#batlle{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#batlle-center{
+display: flex;
+flex-direction: column;
+height: 38em;
+width: 50em;
+margin: auto;
+
+}
+
+/* ----------------------------------------------------- */
+
+
+/* --------------------parte alta--------------------------------- */
+#batlle-top{
+    display: flex;
+    flex-direction: column;
+width: 100%;
+height: 100%;
+background-image: url('../images/bg-1.png');
+background-repeat: no-repeat;
+background-size: 100% ;
+background-position: center;
+
+}
+#batlle-top-in{
+    display: none;
+}
+/* --------top----------- */
+.batlle-top-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+
+}
+
+
+.batlle-top-top-left{
+    width: 50%;
+    height: 100%;
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+}
+
+.batlle-top-top-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+
+/* --------bottom----------- */
+.batlle-top-bottom{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+
+}
+
+
+.batlle-top-bottom-left{
+    width: 50%;
+    height: 100%;
+display: flex;
+justify-content: flex-start;
+align-items: flex-end;
+}
+
+.batlle-top-bottom-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* ----comun----- */
+.dialog-vida{
+    width: 70%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(245, 245, 245);
+
+    border-color: rgb(70, 70, 70);
+border-width: 0.3em;
+border-left-width: 0.45em;
+border-right-width: 0.45em;
+border-style: solid;
+border-radius: 01em;
+margin: 1em;
+box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.5);
+
+}
+
+
+.img-batlle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+
+
+/* --------------------parte alta--------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------parte baja--------------------------------- */
+#batlle-bottom{
+width: 50em;
+height: 10em;
+background-color: teal;
+
+}
+/* --------------------parte baja--------------------------------- */
