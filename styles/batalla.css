@@ -1,3 +1,5 @@
+
+/* borrar al mauetar batalla */
 #title-ini {
   display: none;
 }
@@ -6,12 +8,11 @@
   display: none;
 }
 
-html,
-body {
-  background: black;
-}
+
 /* ---------------------centro-------------------------------- */
 #batlle {
+
+  /* cambiar a none */
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -173,8 +174,8 @@ body {
   background: linear-gradient(
     to right,
     rgb(43, 223, 97) 0%,
-    rgb(43, 223, 97) 92%,
-    rgba(186, 0, 0, 1) 93%,
+    rgb(43, 223, 97) 100%,
+    rgba(186, 0, 0, 1) 100%,
     rgba(186, 0, 0, 1) 100%
   );
 }
@@ -183,8 +184,8 @@ body {
   background: linear-gradient(
     to right,
     rgb(43, 223, 97) 0%,
-    rgb(43, 223, 97) 92%,
-    rgba(186, 0, 0, 1) 93%,
+    rgb(43, 223, 97) 100%,
+    rgba(186, 0, 0, 1) 100%,
     rgba(186, 0, 0, 1) 100%
   );
 }
@@ -240,7 +241,7 @@ body {
   border-radius: 0.5em;
   border-top-right-radius: 0em;
   border-top-left-radius: 0em;
-  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
   margin: 0%;
   overflow: scroll scroll ;
 }

@@ -150,10 +150,8 @@ function fight() {
         setTimeout(() => {
             document.getElementsByClassName('vs-1')[0].classList.remove('vs-2');
             document.getElementById('choose-main').style.display = 'none';
-
-
-
-
+            document.getElementById('batlle').style.display = 'flex';
+            empezarBatalla(pokemon[count]);
         }, 500)
         blockBatalla = true;
     }
