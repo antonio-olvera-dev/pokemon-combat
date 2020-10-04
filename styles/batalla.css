@@ -1,233 +1,255 @@
-#title-ini{
-display: none;
+#title-ini {
+  display: none;
 }
 
-#choose-main{
-display: none;
+#choose-main {
+  display: none;
 }
 
-html,body{background: black;}
+html,
+body {
+  background: black;
+}
 /* ---------------------centro-------------------------------- */
-#batlle{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+#batlle {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-#batlle-center{
-display: flex;
-flex-direction: column;
-height: 38em;
-width: 50em;
-margin: auto;
-
+#batlle-center {
+  display: flex;
+  flex-direction: column;
+  height: 38em;
+  width: 50em;
+  margin: auto;
 }
 
 /* ----------------------------------------------------- */
 
-
 /* --------------------parte alta--------------------------------- */
-#batlle-top{
-    display: flex;
-    flex-direction: column;
-width: 100%;
-height: 100%;
-background-image: url('../images/bg-1.png');
-background-repeat: no-repeat;
-background-size: 100% ;
-background-position: center;
-
+#batlle-top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
 }
-#batlle-top-in{
-    display: none;
+#batlle-top-in {
+  display: none;
 }
 /* --------top----------- */
-.batlle-top-top{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 50%;
-
+.batlle-top-top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50%;
 }
 
-
-.batlle-top-top-left{
-    width: 50%;
-    height: 100%;
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
+.batlle-top-top-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.batlle-top-top-right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.batlle-top-top-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-
-
 
 /* --------bottom----------- */
-.batlle-top-bottom{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 50%;
-
+.batlle-top-bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50%;
 }
 
-
-.batlle-top-bottom-left{
-    width: 50%;
-    height: 100%;
-display: flex;
-justify-content: flex-start;
-align-items: flex-end;
+.batlle-top-bottom-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-.batlle-top-bottom-right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.batlle-top-bottom-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 /* ----comun----- */
-.dialog-vida{
-    width: 70%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: rgb(245, 245, 245);
+.dialog-vida {
+  width: 70%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(245, 245, 245);
 
-    border-color: rgb(37, 37, 37);
-border-width: 0.3em;
-border-left-width: 0.45em;
-border-right-width: 0.45em;
-border-style: solid;
-border-radius: 01em;
-margin: 1em;
-box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.5);
-
+  border-color: rgb(37, 37, 37);
+  border-width: 0.3em;
+  border-left-width: 0.45em;
+  border-right-width: 0.45em;
+  border-style: solid;
+  border-radius: 01em;
+  margin: 1em;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
-.batlle-name{
-    display: flex;
-    width: 80%;
-    height: 40%;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0.1em;
+.batlle-name {
+  display: flex;
+  width: 80%;
+  height: 40%;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.1em;
 }
-.batlle-vida{
-    display: flex;
-    width: 80%;
-    height: 40%;
-    align-items: center;
-    justify-content: flex-end;
-    
-    margin: 0.1em;
-    margin-left: auto;
+.batlle-vida {
+  display: flex;
+  width: 80%;
+  height: 40%;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin: 0.1em;
+  margin-left: auto;
 }
 
-.batlle-name-text{
-    color: black;
-    margin-left: 0.8em;
-    font-weight: 600;
+.batlle-name-text {
+  color: black;
+  margin-left: 0.8em;
+  font-weight: 600;
 }
 
 /* ----------slider--------- */
-.slider-main{
-    width: 90%;
-    height: 80%;
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-align-items: center;
-background-color:  rgb(37, 37, 37);
-border-radius: 2em;
+.slider-main {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  border-radius: 2em;
 }
-.slider-text{
-color: rgb(255, 196, 0);
-font-size: 1em;
-font-weight: 1000;
-margin-left: 0.6em;
+.slider-text {
+  color: rgb(255, 196, 0);
+  font-size: 1em;
+  font-weight: 1000;
+  margin-left: 0.6em;
 }
-.slider-in{
-    width: 80%;
-    height: 50%;
-    margin-left: auto;
-    margin-right: 0.1em;
+.slider-in {
+  width: 80%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: 0.1em;
 
-    background-color: rgb(43, 223, 97);
-    border-radius: 2em;
-    border-color: rgb(230, 230, 230);
-    border-width: 0.15em;
-    border-style: solid;
+  background-color: rgb(43, 223, 97);
+  border-radius: 2em;
+  border-color: rgb(230, 230, 230);
+  border-width: 0.15em;
+  border-style: solid;
 }
-#slider-in-1{
-    background: linear-gradient(to right, rgb(43, 223, 97) 0%, rgb(43, 223, 97) 92%, rgba(186,0,0,1) 93%, rgba(186,0,0,1) 100%);
+#slider-in-1 {
+  background: linear-gradient(
+    to right,
+    rgb(43, 223, 97) 0%,
+    rgb(43, 223, 97) 92%,
+    rgba(186, 0, 0, 1) 93%,
+    rgba(186, 0, 0, 1) 100%
+  );
 }
 
-#slider-in-2{
-    background: linear-gradient(to right, rgb(43, 223, 97) 0%, rgb(43, 223, 97) 92%, rgba(186,0,0,1) 93%, rgba(186,0,0,1) 100%);
-    }
+#slider-in-2 {
+  background: linear-gradient(
+    to right,
+    rgb(43, 223, 97) 0%,
+    rgb(43, 223, 97) 92%,
+    rgba(186, 0, 0, 1) 93%,
+    rgba(186, 0, 0, 1) 100%
+  );
+}
 
 /* ----------slider--------- */
 
 /* ----------Imagenes de los pokemon--------- */
-.img-batlle{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+.img-batlle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-#pokemon-1-batlle{
-    width: 30%;
-    margin-left: auto;
-    margin-right: 6.5em;
-    margin-bottom: 1em;
-
+#pokemon-1-batlle {
+  width: 30%;
+  margin-left: auto;
+  margin-right: 7em;
+  margin-bottom: 1em;
 }
 
-#pokemon-2-batlle{
-width: 70%;
-margin-left: 4em;
-    
+#pokemon-2-batlle {
+  width: 70%;
+  margin-left: 4em;
 }
 /* ----------Imagenes de los pokemon--------- */
 /* --------------------parte alta--------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --------------------parte baja--------------------------------- */
-#batlle-bottom{
-width: 50em;
-height: 10em;
-background-color: teal;
+#batlle-bottom {
+    display: flex;
+  width: 50em;
+  height: 10em;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+.batlle-bottom-dialog {
+
+  display: flex;
+  width: 98.09%;
+  height: 75%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+
+  border-color: rgb(37, 37, 37);
+  border-width: 0.3em;
+  border-left-width: 0.45em;
+  border-right-width: 0.45em;
+  border-style: solid;
+  border-radius: 0.5em;
+  border-top-right-radius: 0em;
+  border-top-left-radius: 0em;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  margin: 0%;
+  overflow: scroll scroll ;
+}
+
+#batlle-bottom-dialog-text{
+color: black;
+text-align: justify;
+font-weight: 500;
+font-size: 1.5em;
+margin: 1em;
 }
 /* --------------------parte baja--------------------------------- */
