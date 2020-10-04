@@ -1,5 +1,7 @@
 "use strict";
 
+let blockIni = false;
+let blockBatalla = false;
 let pokemon = [blastoise, charizard, raichu, venusaur];
 let count = 0;
 
@@ -23,11 +25,11 @@ let IdPokemonImagen = document.getElementById('img-cambio-pokemon')
 // --------------------cambiar pokemon-----------------------------------
 function accionArrowLeft() {
 
-  count-=1;
-    if(count<0){
-        count=2;
+    count -= 1;
+    if (count < 0) {
+        count = 2;
     }
-    
+
 
     switch (count) {
         case 0:
@@ -39,7 +41,7 @@ function accionArrowLeft() {
         case 2:
             cambiarPokemon(pokemon[2]);
             break;
-  
+
 
         default:
             cambiarPokemon(pokemon[0]);
@@ -52,9 +54,9 @@ function accionArrowLeft() {
 
 function accionArrowRight() {
 
-    count+=1;
-    if(count>2){
-        count=0;
+    count += 1;
+    if (count > 2) {
+        count = 0;
     }
 
     switch (count) {
@@ -67,7 +69,7 @@ function accionArrowRight() {
         case 2:
             cambiarPokemon(pokemon[2]);
             break;
-     
+
 
         default:
             cambiarPokemon(pokemon[0]);
@@ -94,7 +96,7 @@ function cambiarPokemon(obje) {
     IdPokemonDefensa.innerText = `${pokemonDefensa}`;
     IdPokemonImagen.src = `${pokemonImagen}`;
     // ------------------------------------
-    
+
     if (obje.tipo.length > 1) {
 
         let col = colores(obje.tipo[0]);
@@ -117,27 +119,88 @@ function cambiarPokemon(obje) {
     }
     // ----------------------------------
 
-    if(obje.nombre ==='Charizard'){
+    if (obje.nombre === 'Charizard') {
         IdPokemonImagen.classList.remove('choose-img-pokemon-1');
         IdPokemonImagen.classList.add('choose-img-pokemon-2');
-       
-    }else{
+
+    } else {
         IdPokemonImagen.classList.add('choose-img-pokemon-1');
         IdPokemonImagen.classList.remove('choose-img-pokemon-2');
 
     }
+    if (blockIni) {
+        reproductor(`${obje.grito}`, 1);
+    }
+    blockIni = true;
+
+
 }
-cambiarPokemon(blastoise);
+
 // --------------------cambiar pokemon-----------------------------------
 
 // --------------------ir a batalla-----------------------------------
 
-function fight(){
-document.getElementsByClassName('vs-1')[0].classList.add('vs-2');
-setTimeout(()=>{
-    document.getElementsByClassName('vs-1')[0].classList.remove('vs-2');
+function fight() {
 
-},500)
+    if (!blockBatalla) {
+        document.getElementsByClassName('vs-1')[0].classList.add('vs-2');
+        audioInicio.pause();
+        reproductor("music/batalla.mp3", 0.5);
+        reproductor("music/boton.mp3", 1);
+        setTimeout(() => {
+            document.getElementsByClassName('vs-1')[0].classList.remove('vs-2');
+
+
+
+
+        }, 500)
+        blockBatalla = true;
+    }
 }
 
 // --------------------ir a batalla-----------------------------------
+
+
+
+// -------------------clic venusaur y eleccion---------------------
+
+
+function choseAccionVenusaur() {
+
+    reproductor(`${venusaur.grito}`, 1);
+
+    let imgVenu = document.getElementsByClassName('choose-venusaur')[0];
+
+
+    imgVenu.classList.add('big-click-1');
+    setTimeout(() => {
+        imgVenu.classList.remove('big-click-1');
+
+    }, 100);
+
+}
+
+function choseAccionEleccion() {
+
+    let obj = pokemon[count];
+    reproductor(`${obj.grito}`, 1)
+
+
+    if (pokemonNombre === 'Charizard') {
+        IdPokemonImagen.classList.remove('big-click-1');
+        IdPokemonImagen.classList.add('big-click-2');
+
+    } else {
+
+        IdPokemonImagen.classList.remove('big-click-2');
+        IdPokemonImagen.classList.add('big-click-1');
+
+    }
+    setTimeout(() => {
+        IdPokemonImagen.classList.remove('big-click-2');
+        IdPokemonImagen.classList.remove('big-click-1');
+
+    }, 100);
+}
+
+// -------------------clic venusaur y eleccion---------------------

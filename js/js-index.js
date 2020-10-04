@@ -1,6 +1,9 @@
 "use strict";
+var audioInicio = new Audio("music/opening.mp3");
+
+
 // ----------------------------------------------------
-(function(){
+(function () {
 
     document.getElementById('choose-main').style.display = 'none';
 }());
@@ -31,26 +34,28 @@ document.getElementById('bod').addEventListener('click', function () {
 
     if (!blockAudio) {
         let context = new AudioContext();
-        let audi = new Audio("music/opening.mp3")
-        audi.loop = false;
-        audi.autoplay = true;
-        audi.volume = 1;
-        audi.play();
-        // ------sonido pikachu--------
-        let audi2 = new Audio("music/pikachu.mp3")
-        audi2.loop = false;
-        audi2.volume = 1;
-        audi2.autoplay = true;
-        audi2.play();
-        // ----------cambiar de pantalla--------------
-setTimeout(()=>{
+        // var audioInicio = new Audio("music/opening.mp3");
+        audioInicio.loop = false;
+        audioInicio.autoplay = true;
+        audioInicio.volume = 0.3;
+        audioInicio.play();
 
-    document.getElementById('title-ini').style.display = 'none';
-    document.getElementById('choose-main').style.display = 'flex';
-    document.getElementById('bod').style.background = 'url(images/bg-3.jpg)';
-    
-},1000);
-       // ----------cambiar de pantalla--------------
+        // ------sonido pikachu--------
+
+        reproductor("music/pikachu.mp3", 1);
+        // ----------cambiar de pantalla--------------
+        document.getElementById('title-ini').style.display = 'none';
+        setTimeout(() => {
+
+
+            document.getElementById('choose-main').style.display = 'flex';
+            document.getElementById('bod').style.background = 'url(images/bg-3.jpg)';
+            // ----
+            reproductor(`${venusaur.grito}`, 1);
+            // ----
+            cambiarPokemon(blastoise);
+        }, 1000);
+        // ----------cambiar de pantalla--------------
         blockAudio = true;
     }
     fullsc();
@@ -78,3 +83,12 @@ function fullsc() {
     }
 } // -------------fullscreen------------------
 
+function reproductor(ruta, volumen) {
+
+    let audi2 = new Audio(ruta)
+    audi2.loop = false;
+    audi2.volume = volumen;
+    audi2.autoplay = true;
+    audi2.play();
+
+}

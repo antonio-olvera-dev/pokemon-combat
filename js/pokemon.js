@@ -6,7 +6,9 @@ var venusaur = {
     vida: 270,
     ataque: 169,
     defensa: 171,
-    imagen:'images/venusaur.gif'
+    imagen:'images/venusaur.gif',
+
+    grito:'music/venusaur.mp3'
 }
 
 var charizard = {
@@ -15,7 +17,9 @@ var charizard = {
     vida: 266,
     ataque: 173,
     defensa: 161,
-    imagen:'images/charizard.gif'
+    imagen:'images/charizard.gif',
+
+    grito:'music/charizard.mp3'
 }
 
 var blastoise = {
@@ -24,7 +28,9 @@ var blastoise = {
     vida: 268,
     ataque: 171,
     defensa: 205,
-    imagen:'images/blastoise.gif'
+    imagen:'images/blastoise.gif',
+
+    grito:'music/blastoise.mp3'
 }
 
 var raichu = {
@@ -33,7 +39,9 @@ var raichu = {
     vida: 230,
     ataque: 185,
     defensa: 115,
-    imagen:'images/raichu.gif'
+    imagen:'images/raichu.gif',
+    
+    grito:'music/raichu.mp3'
 }
 
 // --------------------colores-----------------------------------
