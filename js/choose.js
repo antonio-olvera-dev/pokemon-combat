@@ -1,4 +1,6 @@
 "use strict";
+var musicadeBatalla = new Audio("music/batalla.mp3");
+
 
 let blockIni = false;
 let blockBatalla = false;
@@ -48,7 +50,6 @@ function accionArrowLeft() {
             break;
 
     }
-    console.log(count);
 
 }
 
@@ -76,7 +77,6 @@ function accionArrowRight() {
             break;
 
     }
-    console.log(count);
 
 }
 
@@ -145,8 +145,16 @@ function fight() {
     if (!blockBatalla) {
         document.getElementsByClassName('vs-1')[0].classList.add('vs-2');
         audioInicio.pause();
-        reproductor("music/batalla.mp3", 0.5);
+
+
+        
+        musicadeBatalla.loop = false;
+        musicadeBatalla.volume = 0.5;
+        musicadeBatalla.autoplay = true;
+        musicadeBatalla.play();
         reproductor("music/boton.mp3", 1);
+
+
         setTimeout(() => {
             document.getElementsByClassName('vs-1')[0].classList.remove('vs-2');
             document.getElementById('choose-main').style.display = 'none';
