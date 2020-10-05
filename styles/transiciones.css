@@ -1,0 +1,68 @@
+
+
+/* -------------------------Ajustar tamaño pokemons y animaciones--------------------------------------- */
+
+.anim-venu{
+
+    animation-name: an-ve;
+animation-timing-function: linear;
+animation-duration: 300ms;
+}
+
+@keyframes an-ve{
+
+0%{
+transform: translateX(0em);
+}
+
+25%{
+    transform: translateX(3em);
+
+}
+
+75%{
+    transform: translateX(-3em);
+
+}
+
+
+100%{
+    transform: translateX(0em);
+
+}
+
+}
+/* -------------- */
+
+
+.tam-blastoise-1{
+    transform: scale(1,1);
+
+}
+
+.tam-blastoise-2{
+    transform: scale(2,2);
+
+}
+/* -------------- */
+
+.tam-charizard-1{
+
+    transform: scale(2,2);
+}
+.tam-charizard-2{
+
+    transform: scale(2,2);
+}
+
+/* -------------- */
+
+.tam-raichu-1{
+
+    transform: scale(1,1);
+}
+
+.tam-raichu-2{
+
+    transform: scale(2,2);
+}

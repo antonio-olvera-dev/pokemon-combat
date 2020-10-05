@@ -7,6 +7,7 @@ var venusaur = {
     ataque: 169,
     defensa: 171,
     imagen:'images/venusaur.gif',
+    imgIdle:'images/venusaur-idle-back.gif',
 
     grito:'music/venusaur.mp3'
 }
@@ -18,6 +19,8 @@ var charizard = {
     ataque: 173,
     defensa: 161,
     imagen:'images/charizard.gif',
+    imgIdle:'images/charizard-idle.gif',
+    imgAtack:'images/charizard-atack.gif',
 
     grito:'music/charizard.mp3'
 }
@@ -29,6 +32,8 @@ var blastoise = {
     ataque: 171,
     defensa: 205,
     imagen:'images/blastoise.gif',
+    imgIdle:'images/blastoise-idle.gif',
+    imgAtack:'images/blastoise-atack.gif',
 
     grito:'music/blastoise.mp3'
 }
@@ -40,6 +45,8 @@ var raichu = {
     ataque: 185,
     defensa: 115,
     imagen:'images/raichu.gif',
+    imgIdle:'images/raichu-idle.gif',
+    imgAtack:'images/raichu-atack.gif',
     
     grito:'music/raichu.mp3'
 }
