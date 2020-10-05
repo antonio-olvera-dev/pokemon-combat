@@ -156,11 +156,13 @@ function fight() {
 
 
         setTimeout(() => {
+            transVintage();
+            
             document.getElementsByClassName('vs-1')[0].classList.remove('vs-2');
             document.getElementById('choose-main').style.display = 'none';
             document.getElementById('batlle').style.display = 'flex';
             document.getElementById('bod').style.background = 'url(images/bg-4.png)';
-
+            transBatlle(pokemon[count]);
             empezarBatalla(pokemon[count]);
         }, 500)
         blockBatalla = true;

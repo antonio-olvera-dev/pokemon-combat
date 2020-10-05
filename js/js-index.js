@@ -45,7 +45,10 @@ document.getElementById('bod').addEventListener('click', function () {
         reproductor("music/pikachu.mp3", 1);
         // ----------cambiar de pantalla--------------
         document.getElementById('title-ini').style.display = 'none';
+        
         setTimeout(() => {
+            transVintage();
+            
 
 
             document.getElementById('choose-main').style.display = 'flex';
@@ -54,6 +57,8 @@ document.getElementById('bod').addEventListener('click', function () {
             reproductor(`${venusaur.grito}`, 1);
             // ----
             cambiarPokemon(blastoise);
+
+            transChoose();
         }, 1000);
         // ----------cambiar de pantalla--------------
         blockAudio = true;

@@ -58,7 +58,7 @@ function empezarBatalla(pokemonElegido) {
     }, 300);
 
     pokemonActual = pokemonElegido;
-    redimens();
+    // redimens();
     calculoCaracteristicas(venusaur, pokemonActual);
     cargarPokemon();
 
@@ -196,10 +196,10 @@ function calculoPoder(tipo) {
     }
 }
 
-function redimens() {
+function redimens(nombTem) {
     let nameStringTemp2;
 
-    switch (pokemonActual.nombre) {
+    switch (nombTem.nombre) {
 
         case 'Charizard':
 

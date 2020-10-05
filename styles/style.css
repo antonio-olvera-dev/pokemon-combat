@@ -9,6 +9,7 @@ html {
   background-repeat: no-repeat;
   background: url(../images/bg-inicio.jpg) no-repeat center center fixed;
   background-size: 100% 100%;
+  overflow:  hidden hidden;
 }
 
 
