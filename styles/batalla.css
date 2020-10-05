@@ -1,19 +1,19 @@
 
 /* borrar al mauetar batalla */
-#title-ini {
+/* #title-ini {
   display: none;
 }
 
 #choose-main {
   display: none;
-}
+} */
 
 
 /* ---------------------centro-------------------------------- */
 #batlle {
 
   /* cambiar a none */
-  display: flex;
+  display: none;
   flex-direction: row;
   height: 100%;
   width: 100%;

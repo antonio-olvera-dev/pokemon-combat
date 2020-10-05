@@ -1,68 +1,88 @@
+.transition {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition-duration: 1000ms;
+  background-color: rgb(0, 0, 0);
+}
 
+.transition-vintage {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+
+  transition: background-color 1000 linear;
+
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* @keyframes anim-transition-vintage{
+
+    0%{
+
+    }
+
+} */
 
 /* -------------------------Ajustar tamaño pokemons y animaciones--------------------------------------- */
 
-.anim-venu{
-
-    animation-name: an-ve;
-animation-timing-function: linear;
-animation-duration: 300ms;
+.anim-venu {
+  animation-name: an-ve;
+  animation-timing-function: linear;
+  animation-duration: 300ms;
 }
 
-@keyframes an-ve{
-
-0%{
-transform: translateX(0em);
-}
-
-25%{
-    transform: translateX(3em);
-
-}
-
-75%{
-    transform: translateX(-3em);
-
-}
-
-
-100%{
+@keyframes an-ve {
+  0% {
     transform: translateX(0em);
+  }
 
-}
+  25% {
+    transform: translateX(3em);
+  }
 
-}
-/* -------------- */
+  75% {
+    transform: translateX(-3em);
+  }
 
-
-.tam-blastoise-1{
-    transform: scale(1,1);
-
-}
-
-.tam-blastoise-2{
-    transform: scale(2,2);
-
+  100% {
+    transform: translateX(0em);
+  }
 }
 /* -------------- */
 
-.tam-charizard-1{
-
-    transform: scale(2,2);
+.tam-blastoise-1 {
+  transform: scale(1, 1) translateY(0em);
+  transition-duration: 1ms;
 }
-.tam-charizard-2{
 
-    transform: scale(2,2);
+.tam-blastoise-2 {
+  transform: scale(2, 2) translateY(-0.8em);
+
+  transition-duration: 1ms;
+}
+/* -------------- */
+
+.tam-charizard-1 {
+  transform: scale(1.5, 1.5) translateY(-2em);
+  transition-duration: 1ms;
+}
+.tam-charizard-2 {
+  transform: scale(2, 2) translateY(-2em);
+  transition-duration: 1ms;
 }
 
 /* -------------- */
 
-.tam-raichu-1{
-
-    transform: scale(1,1);
+.tam-raichu-1 {
+  transform: scale(0.8, 0.8) translateY(0em);
+  transition-duration: 1s;
 }
 
-.tam-raichu-2{
-
-    transform: scale(2,2);
+.tam-raichu-2 {
+  transform: scale(2, 2) translateY(-1.7em);
+  transition-duration: 1ms;
 }

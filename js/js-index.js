@@ -37,7 +37,7 @@ document.getElementById('bod').addEventListener('click', function () {
         // var audioInicio = new Audio("music/opening.mp3");
         audioInicio.loop = false;
         audioInicio.autoplay = true;
-        audioInicio.volume = 0.3;
+        audioInicio.volume = 0.6;
         audioInicio.play();
 
         // ------sonido pikachu--------
@@ -49,7 +49,7 @@ document.getElementById('bod').addEventListener('click', function () {
 
 
             document.getElementById('choose-main').style.display = 'flex';
-            document.getElementById('bod').style.background = 'url(images/bg-3.jpg)';
+            document.getElementById('bod').style.background = 'url(images/bg-4.png)';
             // ----
             reproductor(`${venusaur.grito}`, 1);
             // ----

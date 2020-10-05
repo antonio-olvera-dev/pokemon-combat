@@ -149,7 +149,7 @@ function fight() {
 
         
         musicadeBatalla.loop = false;
-        musicadeBatalla.volume = 0.5;
+        musicadeBatalla.volume = 0.8;
         musicadeBatalla.autoplay = true;
         musicadeBatalla.play();
         reproductor("music/boton.mp3", 1);
@@ -159,6 +159,8 @@ function fight() {
             document.getElementsByClassName('vs-1')[0].classList.remove('vs-2');
             document.getElementById('choose-main').style.display = 'none';
             document.getElementById('batlle').style.display = 'flex';
+            document.getElementById('bod').style.background = 'url(images/bg-4.png)';
+
             empezarBatalla(pokemon[count]);
         }, 500)
         blockBatalla = true;

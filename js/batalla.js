@@ -126,10 +126,6 @@ function mensajes(atacante, victim, efectiv) {
 }
 
 
-function mensajes(pokk) {
-
-
-}
 
 
 // ------------------------------------------------------------------------------------------
@@ -207,15 +203,15 @@ function redimens() {
 
         case 'Charizard':
 
-            nameStringTemp = 'tam-charizard-1';
+            nameStringTemp2 = 'tam-charizard-';
             break;
         case 'Blastoise':
 
-            nameStringTemp = 'tam-blastoise-1';
+            nameStringTemp2 = 'tam-blastoise-';
             break;
         case 'Raichu':
 
-            nameStringTemp = 'tam-raichu-1';
+            nameStringTemp2 = 'tam-raichu-';
             break;
 
         default:
@@ -225,8 +221,8 @@ function redimens() {
 
     }
 
+    document.getElementById(`pokemon-1-batlle`).classList.add(`${nameStringTemp2}1`);
 
-    document.getElementById(`pokemon-1-batlle`).classList.add(`${nameStringTemp2}`);
 
 }
 
@@ -271,12 +267,12 @@ function animaAtaque(pok, posici) {
 
         //--------------------------------
         venusaurAnimTemp.classList.add(nameStringTemp);
-        document.getElementById(`pokemon-${posici}-batlle`).src = `${pok.imgAtack}`;
+        venusaurAnimTemp.src = `${pok.imgAtack}`;
 
         reproductor(pok.grito, 1);
 
         setTimeout(() => {
-            document.getElementById(`pokemon-${posici}-batlle`).src = `${pok.imgIdle}`;
+            venusaurAnimTemp.src = `${pok.imgIdle}`;
             //----animacion mipokemon------
 
             venusaurAnimTemp.classList.remove(nameStringTemp);
