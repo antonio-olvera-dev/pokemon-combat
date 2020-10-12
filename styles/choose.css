@@ -1,6 +1,4 @@
-/* #title-ini {
-  display: none;
-} */
+
 #choose-main {
   display: flex;
   flex-direction: row;
@@ -35,7 +33,6 @@
   padding-top: 0.12em;
   padding-right: 0.12em;
   box-shadow:  0px 0px 1.9em 0.1em rgba(255, 255, 255, 0.7);
-
 
 }
 

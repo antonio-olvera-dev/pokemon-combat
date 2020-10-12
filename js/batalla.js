@@ -123,6 +123,11 @@ function mensajes(atacante, victim, efectiv) {
 
     let dialogo = document.getElementById('batlle-bottom-dialog-text');
     dialogo.innerText += `\n${atacante} atacó a ${victim} y el ataque es  ${efectiv}`;
+
+
+    let scrol = document.querySelector('.batlle-bottom-dialog');
+    let scrolSize = scrol.scrollHeight;
+    scrol.scrollTop = scrolSize;
 }
 
 
@@ -366,6 +371,7 @@ function animaDaño(pok, posici) {
 
         if (vidaMipokemon <= 0) {
             reproductor('music/perdedor.mp3', 1);
+            finish(venusaur);
             setTimeout(() => {
                 musicadeBatalla.pause();
             }, 1000);
@@ -374,6 +380,7 @@ function animaDaño(pok, posici) {
         //-----------venusaur pierde---------------
         else if (vidaVenusaur <= 0) {
             reproductor('music/ganador.mp3', 1);
+            finish(pokemonActual);
             setTimeout(() => {
                 musicadeBatalla.pause();
             }, 300);
@@ -383,6 +390,23 @@ function animaDaño(pok, posici) {
 
 
     }, 2000);
+
+
+}
+
+function finish(poke) {
+
+    let dialogo = document.getElementById('batlle-bottom-dialog-text');
+    dialogo.innerText += `\n${poke.nombre} ha ganado la batalla`;
+
+    let scrol = document.querySelector('.batlle-bottom-dialog');
+    let scrolSize = scrol.scrollHeight;
+    scrol.scrollTop = scrolSize;
+
+    setTimeout(() => {
+        location.reload();
+    
+    }, 6000);
 
 
 }
