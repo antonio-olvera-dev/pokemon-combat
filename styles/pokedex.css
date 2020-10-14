@@ -1,0 +1,149 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  cursor: url("./../images/cursor.png"), auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.black{
+    font-weight: 600;
+}
+html{
+height: 100%;
+width: 100%;
+    background: linear-gradient(to bottom, rgba(170,218,230,1) 0%, rgb(86, 163, 184) 100%);
+}
+.main {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: 
+  'header header header'
+  'pokedex pokemon entrenador';
+
+    grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 5em 50em;
+  
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    grid-area: header;
+    background: linear-gradient(to left, rgb(86, 163, 184) 0%,  rgba(170,218,230,1) 50%, rgb(86, 163, 184)100%);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+}
+
+.section-pokedex {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  grid-area: pokedex;
+  background-color: rgba(170,218,230,1);
+flex-wrap: wrap;
+  border-radius: 1em;
+padding: 1em;
+  margin: auto;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+}
+
+.section-pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+  height: 90%;
+  grid-area: pokemon;
+  border-radius: 1em;
+  padding: 1em;
+    margin: auto;
+    background-color: rgba(170,218,230,1);
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+}
+.section-entrenador {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+  height: 90%;
+  grid-area: entrenador;
+  border-radius: 1em;
+  padding: 1em;
+    margin: auto;
+    background-color: rgba(170,218,230,1);
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.20);
+}
+
+
+/* -------------------header---------------------------------- */
+
+.img-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+}
+.img-title > img{
+    width: 3em;
+    height: 3em;
+}
+.text-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    margin-left: 0.3em;
+
+}
+
+
+/* ---------------------pokedex-------------------------------- */
+
+
+
+
+
+
+/* ----------------------pokemon------------------------------- */
+
+.img-pokemon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8em; 
+}
+
+.img-pokemon > img{
+    height:8em; 
+}
+
+.nombre-pokemon{
+    margin-top: 1em;
+    margin-bottom: 4em;
+    font-size: 1.2em;
+font-weight: 600;
+}
+
+
+.texto-pokemon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 3em; 
+    margin-top: 0.3em;
+   margin-left: 2em;
+   font-size: 1.1em;
+}
+.texto-pokemon > p{
+    margin-right: 0.3em;
+}
+
+
+
+/* ---------------------entrenador-------------------------------- */
