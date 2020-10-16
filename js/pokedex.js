@@ -46,7 +46,8 @@ async function getAllPokemon() {
 
 
         for (const item of allPokemonObj) {
-            new Print().printPokedex(item.sprites.front_default, item.name);
+            // new Print().printPokedex(item.sprites.front_default, item.name);
+            new Print().printPokedex(item.sprites.other['official-artwork'].front_default, item.name);
         }
 
         document.getElementsByClassName('section-pokedex')[0].addEventListener('click', (e) => {
@@ -83,10 +84,10 @@ async function pokemon(name) {
         }
         tipos = tipos.substring(0, tipos.length - 2);
         habilidades = habilidades.substring(0, habilidades.length - 2);
-        new Print().printPokemon(poke.sprites.front_default, poke.name, tipos, habilidades, poke.height, poke.weight);
+        // new Print().printPokemon(poke.sprites.front_default, poke.name, tipos, habilidades, poke.height, poke.weight);
+        new Print().printPokemon(poke.sprites.other['official-artwork'].front_default, poke.name, tipos, habilidades, poke.height, poke.weight);
         
         
-        // console.log(poke.sprites.other.official-artwork.front_default);   --------errorrr
 
     } catch (error) {
         console.log(error);
