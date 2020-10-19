@@ -52,6 +52,7 @@ document.getElementById('bod').addEventListener('click', function () {
 
 
             document.getElementById('choose-main').style.display = 'flex';
+            document.getElementById('div-img-pokedex').style.display = 'flex';
             document.getElementById('bod').style.background = 'url(images/bg-4.png)';
             // ----
             reproductor(`${venusaur.grito}`, 1);

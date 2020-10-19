@@ -215,3 +215,10 @@ function choseAccionEleccion() {
 }
 
 // -------------------clic venusaur y eleccion---------------------
+
+
+document.getElementById('div-img-pokedex').addEventListener('click', ()=>{
+
+    window.open("./pokedex.html", '_blank')
+
+});

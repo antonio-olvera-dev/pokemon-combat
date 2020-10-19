@@ -167,3 +167,48 @@ html {
 /* ------------mew------------ */
 
 /* ----------------------------inicio-------------------------------------------------------- */
+
+.div-img-pokedex{
+
+  display: none;
+  position: fixed;
+  width: 10em;
+  height: 10em;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  margin-top: 0.1em;
+
+  animation-name: anim-pokedex-img-pokedex;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+.div-img-pokedex > img{
+  display: flex;
+  position: fixed;
+  z-index: 12;
+  height: 10em;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes anim-pokedex-img-pokedex{
+
+0%{
+transform: scale(1, 1);
+}
+
+50%{
+  transform: scale(1.05, 1.05);
+}
+
+100%{
+  transform: scale(1, 1);
+}
+
+
+}

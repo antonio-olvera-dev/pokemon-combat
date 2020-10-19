@@ -2,7 +2,7 @@
 
 
 // const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=1050&offset=0";
-const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=175&offset=0";
+const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=174&offset=0";
 let allPokemon = [];
 let allPokemonObj = [];
 let pokeRegis = 0;
