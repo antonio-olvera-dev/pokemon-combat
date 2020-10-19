@@ -2,7 +2,7 @@
 
 
 // const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=1050&offset=0";
-const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=174&offset=0";
+const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=1050&offset=0";
 let allPokemon = [];
 let allPokemonObj = [];
 let pokeRegis = 0;
@@ -14,8 +14,25 @@ const callApi = async (url) => {
     loading();
     return data;
 
-}
+};
 
+
+
+let callApi2 = (url) => {
+    let promesa = new Promise((resolve, reject) => {
+
+        if (true) {
+            setTimeout(() => {
+                let pok = callApi(url);
+                resolve(pok);
+            }, 100);
+        } else {
+            reject('error')
+        }
+    });
+
+    return promesa;
+}
 
 
 
@@ -33,30 +50,21 @@ async function getAllPokemon() {
             const element = allPokemon[i];
 
             pokUrl.push(element.url);
-            // console.log(element.name);
-            // console.log(element.url);
+
 
         }
 
         document.getElementById('text-title').textContent = `Pokémon registrados: ${pokeRegis}`;
 
+
+
         for (const item of pokUrl) {
-            allPokemonObj.push(await callApi(item));
+
+            let poke = await callApi2(item);
+            allPokemonObj.push(poke);
+            new Print().printPokedex(poke.sprites.other['official-artwork'].front_default, poke.name);
+
         }
-
-
-        for (const item of allPokemonObj) {
-            // new Print().printPokedex(item.sprites.front_default, item.name);
-            new Print().printPokedex(item.sprites.other['official-artwork'].front_default, item.name);
-        }
-
-        document.getElementsByClassName('section-pokedex')[0].addEventListener('click', (e) => {
-            let nam = e.path[1].getAttribute('nombre');
-            pokemon(nam);
-            entrenador();
-        });
-
-
 
 
 
@@ -66,6 +74,17 @@ async function getAllPokemon() {
     }
 
 }
+
+
+
+document.getElementsByClassName('section-pokedex')[0].addEventListener('click', (e) => {
+    let nam = e.path[1].getAttribute('nombre');
+    pokemon(nam);
+    entrenador();
+});
+
+
+
 
 async function pokemon(name) {
 
@@ -86,8 +105,8 @@ async function pokemon(name) {
         habilidades = habilidades.substring(0, habilidades.length - 2);
         // new Print().printPokemon(poke.sprites.front_default, poke.name, tipos, habilidades, poke.height, poke.weight);
         new Print().printPokemon(poke.sprites.other['official-artwork'].front_default, poke.name, tipos, habilidades, poke.height, poke.weight);
-        
-        
+
+
 
     } catch (error) {
         console.log(error);
@@ -104,8 +123,8 @@ async function entrenador() {
 
         let fecha = entrenador.dob.date;
         let direccion = `${entrenador.location.country}, ${entrenador.location.street.name}, nº ${entrenador.location.street.number}`;
-        fecha = fecha.substring(0,10);
-         new Print().printEntrenador(entrenador.picture.large, entrenador.name.first, entrenador.email, fecha, entrenador.phone, direccion);
+        fecha = fecha.substring(0, 10);
+        new Print().printEntrenador(entrenador.picture.large, entrenador.name.first, entrenador.email, fecha, entrenador.phone, direccion);
 
     } catch (error) {
         console.log(error);
@@ -139,7 +158,7 @@ class Print {
     }
 
     printPokemon(urlImg, nombre, tipo, habilidad, altura, peso) {
-        
+
         document.getElementById('img-pokemon').src = urlImg;
         document.getElementById('nombre-pokemon').textContent = nombre;
         document.getElementById('tipo-pokemon').textContent = tipo;
