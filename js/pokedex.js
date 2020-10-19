@@ -1,11 +1,11 @@
 "use strict";
-
-
+let numblock = 0;
 // const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=1050&offset=0";
-const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=1050&offset=0";
+const allPokemonUrl = "https://pokeapi.co/api/v2/pokemon?limit=721&offset=0";
 let allPokemon = [];
 let allPokemonObj = [];
 let pokeRegis = 0;
+
 
 const callApi = async (url) => {
     loading();
@@ -21,11 +21,26 @@ const callApi = async (url) => {
 let callApi2 = (url) => {
     let promesa = new Promise((resolve, reject) => {
 
+        let temp = 5000; //tiempo para activar la carga de pokemon
         if (true) {
-            setTimeout(() => {
-                let pok = callApi(url);
-                resolve(pok);
-            }, 100);
+            //número de pokemon que carga sin espera
+            if (numblock >= 100) {
+                setTimeout(() => {
+                    numblock = 0;
+                    let pok = callApi(url);
+                    resolve(pok);
+                }, temp);
+                //número de pokemon antes de esperar
+            }
+            else {
+                setTimeout(() => {
+                    let pok = callApi(url);
+                    resolve(pok);
+                }, 10);
+
+            }
+
+
         } else {
             reject('error')
         }
@@ -59,7 +74,7 @@ async function getAllPokemon() {
 
 
         for (const item of pokUrl) {
-
+            numblock++;
             let poke = await callApi2(item);
             allPokemonObj.push(poke);
             new Print().printPokedex(poke.sprites.other['official-artwork'].front_default, poke.name);
@@ -163,8 +178,8 @@ class Print {
         document.getElementById('nombre-pokemon').textContent = nombre;
         document.getElementById('tipo-pokemon').textContent = tipo;
         document.getElementById('habilidad-pokemon').textContent = habilidad;
-        document.getElementById('altura-pokemon').textContent = altura + ' m';
-        document.getElementById('peso-pokemon').textContent = peso + ' kg';
+        document.getElementById('altura-pokemon').textContent = `${(Number(altura)/10)} m`;
+        document.getElementById('peso-pokemon').textContent = `${(Number(peso)/10)} kg`;
 
 
     }
